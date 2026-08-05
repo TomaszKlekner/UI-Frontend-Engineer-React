@@ -17,8 +17,8 @@ Path: mini-monorepo → Pillar 1 → … (for someone with limited stack familia
 
 | # | Step | Status | Note |
 |---|------|--------|------|
-| 1.1 | Wire `@repo/ui` into `web` (`workspace:*`) | in_progress | export constant + import in App |
-| 1.2 | Tailwind v4 + design tokens | pending | |
+| 1.1 | Wire `@repo/ui` into `web` (`workspace:*`) | done | `UI_PACKAGE_NAME` in App; dep in `dependencies` |
+| 1.2 | Tailwind v4 + design tokens | pending | next |
 | 1.3 | Components (Radix/shadcn) + a11y | pending | |
 | 1.4 | Storybook | pending | |
 
@@ -40,3 +40,4 @@ Path: mini-monorepo → Pillar 1 → … (for someone with limited stack familia
 - 2026-08-05: pnpm workspace (root `package.json`, `pnpm-workspace.yaml`); root scripts verified.
 - 2026-08-05: Commit convention, gitignore, `.vscode`; practiced rebase (`reword` + `--force-with-lease`).
 - 2026-08-05: Setup 0.x closed → start Pillar 1 (link `@repo/ui` → `web`).
+- 2026-08-05: 1.1 done — `web` consumes `@repo/ui` via `workspace:*`; learned named vs default import; moved dep from `devDependencies` to `dependencies`.
