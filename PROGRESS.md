@@ -1,28 +1,42 @@
-# Log postępu — UI Frontend Engineer (eSkill)
+# Progress log — UI Frontend Engineer
 
-Ścieżka: mini-monorepo → Filar 1 → … (dla osoby z pobieżną znajomością stacku)
+Path: mini-monorepo → Pillar 1 → … (for someone with limited stack familiarity)
 
-## Setup środowiska
+## Environment setup
 
-| # | Krok | Status | Notatka |
-|---|------|--------|---------|
-| 0.1 | Node.js (LTS / aktualny) | done | `v22.21.1` |
+| # | Step | Status | Note |
+|---|------|--------|------|
+| 0.1 | Node.js (LTS / current) | done | `v22.21.1` |
 | 0.2 | pnpm (latest) | done | `11.20.0` (corepack) |
-| 0.3 | Scaffold monorepo (`apps/web` Vite+React+TS) | done | ESLint (nie Oxlint); appka działa |
-| 0.4 | `packages/ui` (placeholder) | in_progress | |
-| 0.5 | `pnpm-workspace.yaml` + instalacja z roota | pending | |
-| 0.6 | Dev server działa | done | port `5173` (uruchomione lokalnie) |
+| 0.3 | Scaffold `apps/web` (Vite + React + TS) | done | ESLint (not Oxlint) |
+| 0.4 | `packages/ui` (placeholder + entrypoint) | done | `@repo/ui`, `src/index.ts` |
+| 0.5 | `pnpm-workspace.yaml` + root scripts | done | `pnpm install` / `dev` / `build` / `lint` OK |
+| 0.6 | Dev + build from root | done | `pnpm dev` → `:5173`; `pnpm build` OK |
 
-## Filar 1 — Design System
+## Pillar 1 — Design System
 
-| # | Krok | Status | Notatka |
-|---|------|--------|---------|
-| 1.x | (po setupie) | pending | |
+| # | Step | Status | Note |
+|---|------|--------|------|
+| 1.1 | Wire `@repo/ui` into `web` (`workspace:*`) | in_progress | export constant + import in App |
+| 1.2 | Tailwind v4 + design tokens | pending | |
+| 1.3 | Components (Radix/shadcn) + a11y | pending | |
+| 1.4 | Storybook | pending | |
+
+## Tooling / repo (side track)
+
+| # | Step | Status | Note |
+|---|------|--------|------|
+| T.1 | Conventional Commits (`COMMIT_CONVENTION.md`) | done | |
+| T.2 | Root `.gitignore` | done | |
+| T.3 | Workspace `.vscode` settings | done | tab size 2, Prettier, format on save |
+| T.4 | Teacher rule (`.cursor/rules`) | done | |
 
 ---
 
-## Historia
+## History
 
-- 2026-08-05: Node `v22.21.1` potwierdzony.
-- 2026-08-05: pnpm `11.20.0` potwierdzony.
-- 2026-08-05: `apps/web` (Vite + React + TS + ESLint) zainstalowane; `dev` na `:5173`.
+- 2026-08-05: Node `v22.21.1`, pnpm `11.20.0`.
+- 2026-08-05: Scaffolded `apps/web`; `packages/ui` placeholder + entrypoint.
+- 2026-08-05: pnpm workspace (root `package.json`, `pnpm-workspace.yaml`); root scripts verified.
+- 2026-08-05: Commit convention, gitignore, `.vscode`; practiced rebase (`reword` + `--force-with-lease`).
+- 2026-08-05: Setup 0.x closed → start Pillar 1 (link `@repo/ui` → `web`).
