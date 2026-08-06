@@ -19,19 +19,22 @@ Path: mini-monorepo → Pillar 1 → … (for someone with limited stack familia
 |---|------|--------|------|
 | 1.1 | Wire `@repo/ui` into `web` (`workspace:*`) | done | `UI_PACKAGE_NAME` in App; dep in `dependencies` |
 | 1.2 | Tailwind v4 in `apps/web` | done | `@tailwindcss/vite`; IntelliSense; `prettier-plugin-tailwindcss` |
-| 1.2b | Design tokens (CSS variables) | done | grayscale scale + semantic aliases in `@theme`; used in App |
-| 1.2c | Move tokens into `@repo/ui` | pending | next |
-| 1.3 | Components (Radix/shadcn) + a11y | pending | |
+| 1.2b | Design tokens (CSS variables) | done | grayscale + semantic aliases in `@theme` |
+| 1.2c | Move tokens into `@repo/ui` | done | `styles/tokens.css` + `exports`; web imports package CSS |
+| 1.3 | First `Button` in `@repo/ui` | done | variants, `cn`, barrel export; used in `web` |
+| 1.3b | Button polish (a11y, peerDeps, API) | pending | next |
+| 1.3c | Radix / shadcn-style primitives | pending | |
 | 1.4 | Storybook | pending | |
 
 ## Tooling / repo (side track)
 
 | # | Step | Status | Note |
 |---|------|--------|------|
-| T.1 | Conventional Commits (`COMMIT_CONVENTION.md`) | done | |
+| T.1 | Conventional Commits (`COMMIT_CONVENTION.md`) | done | practiced splitting commits by type |
 | T.2 | Root `.gitignore` | done | |
-| T.3 | Workspace `.vscode` settings | done | tab 2, Prettier, word wrap, ruler 80, unknownAtRules ignore |
-| T.4 | Teacher rule (`.cursor/rules`) | done | |
+| T.3 | Workspace `.vscode` settings | done | tab 2, Prettier, word wrap, organize imports on save |
+| T.4 | Teacher rule (`.cursor/rules`) | done | includes design-patterns teaching |
+| T.5 | Prettier organize-imports (+ Tailwind last) | done | `apps/web/.prettierrc.json` |
 
 ---
 
@@ -42,6 +45,9 @@ Path: mini-monorepo → Pillar 1 → … (for someone with limited stack familia
 - 2026-08-05: pnpm workspace (root `package.json`, `pnpm-workspace.yaml`); root scripts verified.
 - 2026-08-05: Commit convention, gitignore, `.vscode`; practiced rebase (`reword` + `--force-with-lease`).
 - 2026-08-05: Setup 0.x closed → start Pillar 1 (link `@repo/ui` → `web`).
-- 2026-08-05: 1.1 done — `web` consumes `@repo/ui` via `workspace:*`; learned named vs default import; moved dep from `devDependencies` to `dependencies`.
-- 2026-08-06: 1.2 done — Tailwind v4 in `apps/web` (`@tailwindcss/vite`); Prettier Tailwind class sorting + IntelliSense verified. Next: design tokens (1.2b).
-- 2026-08-06: 1.2b done — grayscale tokens + semantic aliases (`background`, `foreground`, `muted`, `border`) via Tailwind `@theme`; App uses token classes. Next: move tokens into `@repo/ui` (1.2c).
+- 2026-08-05: 1.1 done — `web` consumes `@repo/ui` via `workspace:*`; named vs default import; dep in `dependencies`.
+- 2026-08-06: 1.2 done — Tailwind v4 in `apps/web`; Prettier Tailwind class sorting + IntelliSense.
+- 2026-08-06: 1.2b done — grayscale tokens + semantic aliases via `@theme`.
+- 2026-08-06: 1.2c done — tokens live in `@repo/ui`; learned `exports` public path vs disk path; `workspace:*` vs new package linking.
+- 2026-08-06: 1.3 done — `Button` + `cn` (`clsx` + `tailwind-merge`); wrapper / variants / composition; barrel export; `import type` + `verbatimModuleSyntax`.
+- 2026-08-06: Tooling — organize imports on save; design-patterns note in teacher rule; conventional commits practice (feat/chore/docs split).
