@@ -38,3 +38,6 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+*storybook.log
+storybook-static
+debug-storybook.log
