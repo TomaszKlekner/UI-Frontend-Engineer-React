@@ -22,9 +22,9 @@ Path: mini-monorepo → Pillar 1 → … (for someone with limited stack familia
 | 1.2b | Design tokens (CSS variables) | done | grayscale + semantic aliases in `@theme` |
 | 1.2c | Move tokens into `@repo/ui` | done | `styles/tokens.css` + `exports`; web imports package CSS |
 | 1.3 | First `Button` in `@repo/ui` | done | variants, `cn`, barrel export; used in `web` |
-| 1.3b | Button polish (a11y, peerDeps, API) | pending | next |
-| 1.3c | Radix / shadcn-style primitives | pending | |
-| 1.4 | Storybook | pending | |
+| 1.3b | Button polish (a11y, peerDeps, API) | done | disabled styles; React `peerDependencies`; focus-visible; demo in `web` |
+| 1.3c | Radix / shadcn-style primitives | pending | next |
+| 1.4 | Storybook | done | Tailwind via `viteFinal`; Button Primary/Secondary/Disabled stories |
 
 ## Tooling / repo (side track)
 
@@ -51,3 +51,5 @@ Path: mini-monorepo → Pillar 1 → … (for someone with limited stack familia
 - 2026-08-06: 1.2c done — tokens live in `@repo/ui`; learned `exports` public path vs disk path; `workspace:*` vs new package linking.
 - 2026-08-06: 1.3 done — `Button` + `cn` (`clsx` + `tailwind-merge`); wrapper / variants / composition; barrel export; `import type` + `verbatimModuleSyntax`.
 - 2026-08-06: Tooling — organize imports on save; design-patterns note in teacher rule; conventional commits practice (feat/chore/docs split).
+- 2026-08-06: 1.3b done — disabled + focus-visible; React as peerDep; `@source` for UI package classes; disabled Button in `apps/web`.
+- 2026-08-06: 1.4 done — Storybook in `packages/ui` (React Vite); Tailwind plugin in `viteFinal`; Button stories; a11y addon installed (to practice next).
