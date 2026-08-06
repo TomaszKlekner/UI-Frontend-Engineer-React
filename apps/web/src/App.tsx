@@ -1,4 +1,4 @@
-import { Button, UI_PACKAGE_NAME } from "@repo/ui";
+import { Button, Checkbox, UI_PACKAGE_NAME } from "@repo/ui";
 
 function App() {
   return (
@@ -6,6 +6,7 @@ function App() {
       <h1 className="text-foreground mb-4 text-2xl font-semibold">
         Home Page: {UI_PACKAGE_NAME}
       </h1>
+
       <Button>Primary</Button>
 
       <Button
@@ -19,6 +20,14 @@ function App() {
       <Button className="ml-4" disabled>
         Disabled
       </Button>
+
+      <label
+        htmlFor="terms"
+        className="mt-6 flex cursor-pointer items-center gap-2 text-sm"
+      >
+        <Checkbox id="terms" />
+        Accept terms
+      </label>
     </main>
   );
 }

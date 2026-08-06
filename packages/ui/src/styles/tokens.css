@@ -1,6 +1,7 @@
 @source "../**/*.{js,ts,jsx,tsx}";
 
 @theme {
+  /* ——— Primitive: grayscale ——— */
   --color-black: #000000;
   --color-white: #ffffff;
 
@@ -16,13 +17,17 @@
   --color-gray-900: #18181b;
   --color-gray-950: #09090b;
 
-  /* semantic aliases — prefer these in components */
+  /* ——— Semantic: surfaces & text ——— */
   --color-background: var(--color-gray-50);
   --color-foreground: var(--color-gray-950);
   --color-muted: var(--color-gray-100);
   --color-muted-foreground: var(--color-gray-500);
-  --color-border: var(--color-gray-200);
 
+  /* ——— Semantic: borders ——— */
+  --color-border: var(--color-gray-200);
+  --color-border-strong: var(--color-gray-400);
+
+  /* ——— Typography & radius ——— */
   --font-sans: "Segoe UI", ui-sans-serif, system-ui, sans-serif;
   --radius-control: 0.5rem;
 }
