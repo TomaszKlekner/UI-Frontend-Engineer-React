@@ -17,6 +17,7 @@ export function Button({
       type={type}
       className={cn(
         "cursor-pointer rounded-control px-4 py-2 font-sans text-sm font-medium",
+        "disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50",
         variant === "primary" && "bg-gray-900 text-white",
         variant === "secondary" &&
           "border border-border bg-muted text-foreground",
