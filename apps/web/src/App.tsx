@@ -15,6 +15,10 @@ function App() {
       >
         Secondary
       </Button>
+
+      <Button className="ml-4" disabled>
+        Disabled
+      </Button>
     </main>
   );
 }
