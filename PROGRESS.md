@@ -23,8 +23,9 @@ Path: mini-monorepo → Pillar 1 → … (for someone with limited stack familia
 | 1.2c | Move tokens into `@repo/ui` | done | `styles/tokens.css` + `exports`; web imports package CSS |
 | 1.3 | First `Button` in `@repo/ui` | done | variants, `cn`, barrel export; used in `web` |
 | 1.3b | Button polish (a11y, peerDeps, API) | done | disabled styles; React `peerDependencies`; focus-visible; demo in `web` |
-| 1.3c | Radix / shadcn-style primitives | pending | next |
-| 1.4 | Storybook | done | Tailwind via `viteFinal`; Button Primary/Secondary/Disabled stories |
+| 1.3c | Radix / shadcn-style primitives | done | Checkbox + composable Dialog; folders per component; `border-strong` token |
+| 1.3d | CVA for variants (optional polish) | pending | next — cleaner Button variants |
+| 1.4 | Storybook | done | Tailwind via `viteFinal`; Button, Checkbox, Dialog stories |
 
 ## Tooling / repo (side track)
 
@@ -53,3 +54,6 @@ Path: mini-monorepo → Pillar 1 → … (for someone with limited stack familia
 - 2026-08-06: Tooling — organize imports on save; design-patterns note in teacher rule; conventional commits practice (feat/chore/docs split).
 - 2026-08-06: 1.3b done — disabled + focus-visible; React as peerDep; `@source` for UI package classes; disabled Button in `apps/web`.
 - 2026-08-06: 1.4 done — Storybook in `packages/ui` (React Vite); Tailwind plugin in `viteFinal`; Button stories; a11y addon installed (to practice next).
+- 2026-08-06: Checkbox — Radix wrapper, stories (`WithLabel` + `render`), semantic `border-strong`; component folders (colocation).
+- 2026-08-07: `Plan.md` translated to English.
+- 2026-08-07: 1.3c done — composable Dialog (`Dialog`/`Trigger`/`Content`/…); `asChild`; content in `apps/web`; Dialog story via `render`.
