@@ -1,67 +1,67 @@
-# Plan Nauki i Rozwoju: Senior Front-End Engineer / UI Specialist
+# Learning & Growth Plan: Senior Front-End Engineer / UI Specialist
 
-Ustrukturyzowany plan nauki podzielony na 5 filarów, zaprojektowany z myślą o opanowaniu zaawansowanych zagadnień front-endowych oraz zbudowaniu produkcyjnego portfolio.
-
----
-
-## 1. Architektura UI i Design System
-
-Tworzenie własnej biblioteki komponentów (In-house Design System) wymaga wyjścia poza zwykłe pisanie kodu w Tailwindzie.
-
-- **Tailwind CSS & Tokeny Designu:** Opanuj architekturę tokenów (kolory, typografia, odstępy) z wykorzystaniem zmiennych CSS i Tailwind `config`. Naucz się tworzyć bezkonfliktowe warianty komponentów (używając `clsx` oraz `tailwind-merge`).
-- **Dostępność (a11y):** Naucz się standardów **WCAG 2.1 AA**. Zrozum role ARIA, zarządzanie fokusem (`focus-visible`, `FocusTrap`), nawigację klawiaturą oraz testowanie z czytnikami ekranu (NVDA, VoiceOver).
-- **Budowa Biblioteki Komponentów:** Zbuduj własną paczkę w oparciu o unstyled primitives (np. Radix UI lub Headless UI), pokrywając ją Storybookiem do dokumentacji i testów wizualnych.
+A structured learning plan across 5 pillars, aimed at mastering advanced front-end topics and building a production-ready portfolio.
 
 ---
 
-## 2. Zarządzanie Stanem i Dane (TanStack Ecosystem)
+## 1. UI Architecture & Design System
+
+Building an in-house component library (design system) means going beyond ad-hoc Tailwind class strings.
+
+- **Tailwind CSS & Design Tokens:** Master token architecture (color, typography, spacing) with CSS variables and Tailwind theme configuration (`@theme` in v4). Learn conflict-free component variants (`clsx` + `tailwind-merge`).
+- **Accessibility (a11y):** Learn **WCAG 2.1 AA**. Understand ARIA roles, focus management (`focus-visible`, focus traps), keyboard navigation, and testing with screen readers (NVDA, VoiceOver).
+- **Component Library:** Build your own package on unstyled primitives (e.g. Radix UI or Headless UI), documented and visually tested with Storybook.
+
+---
+
+## 2. State & Data (TanStack Ecosystem)
 
 - **TanStack Query (React Query):**
-  - Koncepcje: `staleTime` vs `gcTime`, dedukcja zapytań, optymistyczne aktualizacje (`optimistic updates`).
-  - Wzorce: Podział na Query Factories, custom hooki data-fetchingowe, obsługa błędów za pomocą React Error Boundaries oraz SSR/Hydration.
+  - Concepts: `staleTime` vs `gcTime`, query deduplication, optimistic updates.
+  - Patterns: query factories, custom data-fetching hooks, error handling with React Error Boundaries, SSR/hydration.
 - **TanStack Table:**
-  - Opanuj podejście Headless: tabela dostarcza logikę (sortowanie, filtrowanie, paginacja, przypinanie kolumn), a Ty odpowiadasz za renderowanie w HTML/Tailwindzie.
-  - Zbuduj produkcyjną tabelę obsługującą server-side pagination oraz dużą liczbę wierszy (z integracją z virtualization, np. TanStack Virtual).
+  - Headless approach: the table owns logic (sorting, filtering, pagination, column pinning); you own HTML/Tailwind rendering.
+  - Build a production table with server-side pagination and large row counts (e.g. TanStack Virtual).
 
 ---
 
-## 3. Tooling, Monorepo i Zarządzanie Workspace'ami
+## 3. Tooling, Monorepo & Workspaces
 
-Współczesne duże aplikacje rzadko są pojedynczymi repozytoriami.
+Large apps rarely live in a single package.
 
-- **Menedżery paczek i Monorepo:** Poznaj **pnpm workspaces**. Naucz się konfigurować repozytorium monorepo (np. z Turborepo lub Nx), w którym osobno leży aplikacja, a osobno prywatna biblioteka UI (`@repo/ui`).
-- **Bundlery (Vite & Webpack):** Zrozum różnice między budowaniem do produkcji (Rollup/Esbuild pod maską Vite) a trybem dev. Naucz się konfigurować Code Splitting, Tree Shaking oraz alternatywne moduły budowania.
-- **Jakość Kodu:** Skonfiguruj zaawansowany **ESLint** (z regułami `eslint-plugin-jsx-a11y`, `typescript-eslint`) oraz **Prettier** wspólnie z toolami Git hooks (**Husky** + **lint-staged**).
-
----
-
-## 4. Wydajność i Bezpieczeństwo (Web Perf & Security)
-
-| Obszar          | Kluczowe zagadnienia do opanowania                                                                                                                                                                   |
-| :-------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Performance** | Core Web Vitals (LCP, INP, CLS), profiler w Chrome DevTools, React Profiler, lazy loading komponentów/obrazów, memoizacja (`useMemo`, `useCallback`, `React.memo` – kiedy stosować, a kiedy unikać). |
-| **Security**    | Cross-Site Scripting (XSS), CSRF (bezpieczne ciasteczka `SameSite`, `HttpOnly`), Content Security Policy (CSP), bezpieczna obsługa tokenów JWT (storage vs in-memory/cookies).                       |
+- **Package Managers & Monorepo:** Learn **pnpm workspaces**. Configure a monorepo (e.g. Turborepo or Nx) with a separate app and a private UI library (`@repo/ui`).
+- **Bundlers (Vite & Webpack):** Understand production builds (Rollup/esbuild under Vite) vs dev mode. Configure code splitting, tree shaking, and alternative build targets when needed.
+- **Code Quality:** Set up solid **ESLint** (`eslint-plugin-jsx-a11y`, `typescript-eslint`) and **Prettier**, plus Git hooks (**Husky** + **lint-staged**).
 
 ---
 
-## 5. CI/CD i Procesy Buildowania
+## 4. Performance & Security (Web Perf & Security)
 
-- **GitHub Actions / GitLab CI:** Napisz pipeline, który przy każdym Pull Requeście:
-  1. Uruchamia linter i sprawdzanie typów (`tsc --noEmit`).
-  2. Wykonuje testy jednostkowe i integracyjne (Vitest / React Testing Library).
-  3. Buduje paczkę UI oraz aplikację końcową.
-  4. Wdraża wersję podglądową (np. na Vercel / Netlify / Cloudflare Pages).
-- **Automatyczne Wersjonowanie:** Poznaj narzędzia takie jak `changesets` lub `semantic-release` do automatycznego podbijania wersji semantycznej (SemVer) biblioteki UI w monorepo.
+| Area            | Key topics to master                                                                                                                                                                                      |
+| :-------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Performance** | Core Web Vitals (LCP, INP, CLS), Chrome DevTools profiler, React Profiler, lazy loading components/images, memoization (`useMemo`, `useCallback`, `React.memo` — when to use and when to avoid).         |
+| **Security**    | Cross-Site Scripting (XSS), CSRF (safe cookies: `SameSite`, `HttpOnly`), Content Security Policy (CSP), safe JWT handling (storage vs in-memory/cookies).                                                |
 
 ---
 
-## Rekomendowany Projekt do Portfolio
+## 5. CI/CD & Build Processes
 
-Zamiast kilku małych aplikacji, zbuduj **jeden zaawansowany system monorepo**:
+- **GitHub Actions / GitLab CI:** Write a pipeline that on every Pull Request:
+  1. Runs the linter and typecheck (`tsc --noEmit`).
+  2. Runs unit and integration tests (Vitest / React Testing Library).
+  3. Builds the UI package and the app.
+  4. Deploys a preview (e.g. Vercel / Netlify / Cloudflare Pages).
+- **Automated Versioning:** Learn `changesets` or `semantic-release` for SemVer bumps of the UI library in the monorepo.
 
-1. **Struktura Monorepo (`pnpm`):**
-   - `apps/web`: Aplikacja React (Vite, TS, TanStack Query, TanStack Table).
-   - `packages/ui`: Twoja biblioteka komponentów z powiązanym Storybookiem.
-   - `packages/config`: Współdzielone konfigi ESLint, Prettier, TypeScript.
-2. **Funkcjonalność Aplikacji:** Panel administracyjny (Dashboard) wyświetlający analitykę i dane z zewnętrznego API w tabeli (TanStack Table), z filtrowaniem, paginacją i pełną obsługą motywu (Dark/Light mode) oraz dostępnością z klawiatury.
-3. **CI/CD:** Automatyczny pipeline w GitHub Actions walidujący jakość przy każdym kommicie.
+---
+
+## Recommended Portfolio Project
+
+Instead of many small apps, build **one advanced monorepo**:
+
+1. **Monorepo structure (`pnpm`):**
+   - `apps/web`: React app (Vite, TS, TanStack Query, TanStack Table).
+   - `packages/ui`: Component library with Storybook.
+   - `packages/config`: Shared ESLint, Prettier, and TypeScript configs.
+2. **App functionality:** Admin dashboard with analytics and external API data in a table (TanStack Table), filtering, pagination, dark/light theme, and full keyboard accessibility.
+3. **CI/CD:** GitHub Actions pipeline validating quality on every commit.
