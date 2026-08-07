@@ -1,4 +1,14 @@
-import { Button, Checkbox, UI_PACKAGE_NAME } from "@repo/ui";
+import {
+  Button,
+  Checkbox,
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+  DialogTrigger,
+  UI_PACKAGE_NAME,
+} from "@repo/ui";
 
 function App() {
   return (
@@ -28,6 +38,54 @@ function App() {
         <Checkbox id="terms" />
         Accept terms
       </label>
+
+      <Dialog>
+        <DialogTrigger asChild>
+          <Button className="mt-6">Edit profile</Button>
+        </DialogTrigger>
+
+        <DialogContent>
+          <DialogTitle className="text-lg font-semibold">
+            Edit profile
+          </DialogTitle>
+
+          <DialogDescription className="text-muted-foreground mt-1 text-sm">
+            Make changes to your profile here. Click save when you&apos;re done.
+          </DialogDescription>
+
+          <fieldset className="mt-4">
+            <label htmlFor="name">Name</label>
+            <input
+              id="name"
+              className="ml-4 border-b"
+              name="name"
+              type="text"
+              defaultValue="John Doe"
+            />
+          </fieldset>
+          <fieldset className="mt-2">
+            <label htmlFor="username">Username</label>
+            <input
+              id="username"
+              className="ml-4 border-b"
+              name="username"
+              type="text"
+              defaultValue="@jdoe"
+            />
+          </fieldset>
+          <div className="mt-4 flex justify-between gap-2">
+            <DialogClose asChild>
+              <Button>Save changes</Button>
+            </DialogClose>
+
+            <DialogClose asChild>
+              <Button className="border-black" variant="secondary">
+                Close
+              </Button>
+            </DialogClose>
+          </div>
+        </DialogContent>
+      </Dialog>
     </main>
   );
 }
