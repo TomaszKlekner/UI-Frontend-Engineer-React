@@ -11,7 +11,10 @@
   "scripts": {
     "lint": "echo \"ui: no lint yet\"",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "vitest run",
+    "test:unit": "vitest run --project unit",
+    "test:watch": "vitest"
   },
   "peerDependencies": {
     "react": "^19.0.0"
@@ -31,9 +34,13 @@
     "@storybook/addon-vitest": "^10.5.6",
     "@storybook/react-vite": "^10.5.6",
     "@tailwindcss/vite": "^4.3.3",
+    "@testing-library/jest-dom": "^7.0.0",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.3",
     "@types/react": "^19.2.18",
     "@vitest/browser-playwright": "^4.1.10",
     "@vitest/coverage-v8": "^4.1.10",
+    "jsdom": "^30.0.1",
     "playwright": "^1.62.1",
     "prop-types": "^15.8.1",
     "react": "^19.2.8",
