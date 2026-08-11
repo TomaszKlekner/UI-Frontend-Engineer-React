@@ -1,0 +1,1 @@
+export { styleGuideRoutes } from "./routes";

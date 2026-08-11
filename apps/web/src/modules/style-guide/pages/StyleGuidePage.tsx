@@ -10,11 +10,11 @@ import {
   UI_PACKAGE_NAME,
 } from "@repo/ui";
 
-function App() {
+export function StyleGuide() {
   return (
-    <main className="bg-background text-foreground min-h-screen p-8 font-sans">
+    <main className="bg-background text-foreground flex-1 p-8 font-sans">
       <h1 className="text-foreground mb-4 text-2xl font-semibold">
-        Home Page: {UI_PACKAGE_NAME}
+        Style Guide: {UI_PACKAGE_NAME}
       </h1>
 
       <Button>Primary</Button>
@@ -89,5 +89,3 @@ function App() {
     </main>
   );
 }
-
-export default App;
