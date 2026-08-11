@@ -20,6 +20,11 @@ See `Plan.md` for the full learning pillars and `PROGRESS.md` for current status
 - **Tailwind CSS v4** (`@tailwindcss/vite`)
 - **clsx** + **tailwind-merge** (`cn` helper)
 
+## Live demos
+
+- App (Vercel): [https://react-web-ui-beta.vercel.app/](https://react-web-ui-beta.vercel.app/)
+- Storybook (Vercel): [https://react-ui-storybook-navy.vercel.app/](https://react-ui-storybook-navy.vercel.app/)
+
 ## Structure
 
 ```text
@@ -46,6 +51,12 @@ Other scripts (from repo root):
 ```bash
 pnpm build
 pnpm lint
+```
+
+Storybook (local):
+
+```bash
+pnpm --filter @repo/ui storybook
 ```
 
 ## Design system notes
