@@ -9,3 +9,4 @@ export {
   DialogTitle,
   DialogTrigger,
 } from "./components/dialog/dialog";
+export { Input } from "./components/input/input";
