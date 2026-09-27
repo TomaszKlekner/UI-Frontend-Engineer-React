@@ -8,6 +8,7 @@ import {
   DialogTitle,
   DialogTrigger,
   Input,
+  Label,
   UI_PACKAGE_NAME,
 } from "@repo/ui";
 
@@ -18,7 +19,7 @@ export function StyleGuide() {
         Style Guide: {UI_PACKAGE_NAME}
       </h1>
 
-      <section className="border-border space-y-3 border-t py-6">
+      <section className="border-border space-y-3 border-t px-4 py-6">
         <h2 className="text-lg font-medium">Button</h2>
         <div className="flex flex-wrap gap-3">
           <Button>Primary</Button>
@@ -27,7 +28,7 @@ export function StyleGuide() {
         </div>
       </section>
 
-      <section className="border-border space-y-3 border-t py-6">
+      <section className="border-border space-y-3 border-t bg-gray-200 px-4 py-6">
         <h2 className="text-lg font-medium">Checkbox</h2>
         <label
           htmlFor="terms"
@@ -38,7 +39,7 @@ export function StyleGuide() {
         </label>
       </section>
 
-      <section className="border-border space-y-3 border-t py-6">
+      <section className="border-border space-y-3 border-t px-4 py-6">
         <h2 className="text-lg font-medium">Dialog</h2>
         <Dialog>
           <DialogTrigger asChild>
@@ -90,9 +91,14 @@ export function StyleGuide() {
         </Dialog>
       </section>
 
-      <section className="border-border space-y-3 border-t py-6">
+      <section className="border-border space-y-3 border-t bg-gray-200 px-4 py-6">
         <h2 className="text-lg font-medium">Input</h2>
         <Input />
+      </section>
+
+      <section className="border-border space-y-3 border-t px-4 py-6">
+        <h2 className="text-lg font-medium">Label</h2>
+        <Label>Label Element</Label>
       </section>
     </main>
   );

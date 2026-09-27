@@ -10,3 +10,4 @@ export {
   DialogTrigger,
 } from "./components/dialog/dialog";
 export { Input } from "./components/input/input";
+export { Label } from "./components/label/label";
