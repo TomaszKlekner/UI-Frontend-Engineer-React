@@ -52,7 +52,9 @@ function subscribe(listener: () => void) {
 }
 
 const getSnapshot = () => items;
-const getServerSnapshot = (): ToastItem[] => [];
+// Stała referencja — useSyncExternalStore porównuje snapshoty przez ===; nowa [] przy każdym wywołaniu = pętla.
+const EMPTY: ToastItem[] = [];
+const getServerSnapshot = () => EMPTY;
 
 export function Toaster({ className, style }: { className?: string; style?: CSSProperties }) {
   const list = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
