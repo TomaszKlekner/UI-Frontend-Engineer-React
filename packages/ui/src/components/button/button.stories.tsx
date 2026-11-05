@@ -30,3 +30,24 @@ export const Disabled: Story = {
     disabled: true,
   },
 };
+
+export const Outline: Story = {
+  args: {
+    children: "Outline",
+    variant: "outline",
+  },
+};
+
+export const Ghost: Story = {
+  args: {
+    children: "Ghost",
+    variant: "ghost",
+  },
+};
+
+export const Small: Story = {
+  args: {
+    children: "Small",
+    size: "sm",
+  },
+};
