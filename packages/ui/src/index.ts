@@ -35,3 +35,10 @@ export {
   TableRow,
 } from "./components/table/table";
 export { Textarea } from "./components/textarea/textarea";
+export {
+  dismissToast,
+  toast,
+  Toaster,
+  type ToastInput,
+  type ToastVariant,
+} from "./components/toast/toast";

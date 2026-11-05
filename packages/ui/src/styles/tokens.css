@@ -42,3 +42,33 @@
   --radius-card: 0.75rem;
   --shadow-card: 0 1px 2px rgb(9 9 11 / 0.06);
 }
+
+@theme {
+  /* ——— Motion ——— */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized: cubic-bezier(0.3, 0, 0, 1.2);
+  --duration-fast: 150ms;
+  --duration-normal: 220ms;
+
+  --animate-toast-in: toast-in var(--duration-normal) var(--ease-standard);
+  --animate-toast-out: toast-out var(--duration-fast) var(--ease-standard);
+  --animate-fade-in: fade-in var(--duration-normal) var(--ease-standard);
+
+  @keyframes toast-in {
+    from {
+      opacity: 0;
+      transform: translateY(0.5rem) scale(0.98);
+    }
+  }
+  @keyframes toast-out {
+    to {
+      opacity: 0;
+      transform: translateX(1rem);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+}
