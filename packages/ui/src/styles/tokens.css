@@ -36,6 +36,26 @@
   --color-state-subtle: var(--color-gray-100);
   --color-state-strong: var(--color-gray-400);
 
+  /* ——— Status palette (propozycja 05.11 — jeszcze nieużywana w hubie; main = ikona/ramka, text = tekst) ——— */
+  --color-status-success: #10b981;
+  --color-status-success-bg: #ecfdf5;
+  --color-status-success-text: #047857;
+  --color-status-info: #0284c7;
+  --color-status-info-bg: #f0f9ff;
+  --color-status-info-text: #0369a1;
+  --color-status-warning: #d97706;
+  --color-status-warning-bg: #fffbeb;
+  --color-status-warning-text: #b45309;
+  --color-status-notice: #eab308;
+  --color-status-notice-bg: #fefce8;
+  --color-status-notice-text: #854d0e;
+  --color-status-error: #e31b23;
+  --color-status-error-bg: #fef2f2;
+  --color-status-error-text: #b91c1c;
+  --color-status-neutral: #64748b;
+  --color-status-neutral-bg: #f1f5f9;
+  --color-status-neutral-text: #334155;
+
   /* ——— Typography, radius, shadow ——— */
   --font-sans: "Segoe UI", ui-sans-serif, system-ui, sans-serif;
   --radius-control: 0.5rem;
