@@ -36,7 +36,7 @@
   --color-state-subtle: var(--color-gray-100);
   --color-state-strong: var(--color-gray-400);
 
-  /* ——— Status palette (propozycja 05.11 — jeszcze nieużywana w hubie; main = ikona/ramka, text = tekst) ——— */
+  /* ——— Status palette (05.11): main = ikona / ramka / kropka (NIE tekst), bg = tło, text = tekst (WCAG AA) ——— */
   --color-status-success: #10b981;
   --color-status-success-bg: #ecfdf5;
   --color-status-success-text: #047857;
@@ -52,9 +52,9 @@
   --color-status-error: #e31b23;
   --color-status-error-bg: #fef2f2;
   --color-status-error-text: #b91c1c;
-  --color-status-neutral: #64748b;
-  --color-status-neutral-bg: #f1f5f9;
-  --color-status-neutral-text: #334155;
+  --color-status-neutral: var(--color-gray-500);
+  --color-status-neutral-bg: var(--color-gray-100);
+  --color-status-neutral-text: var(--color-gray-700);
 
   /* ——— Typography, radius, shadow ——— */
   --font-sans: "Segoe UI", ui-sans-serif, system-ui, sans-serif;
