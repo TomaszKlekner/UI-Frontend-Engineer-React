@@ -21,3 +21,17 @@ export {
 } from "./components/dialog/dialog";
 export { Input } from "./components/input/input";
 export { Label } from "./components/label/label";
+export { Field } from "./components/field/field";
+export { PageHeader } from "./components/page-header/page-header";
+export { Select } from "./components/select/select";
+export { Stat } from "./components/stat/stat";
+export {
+  Table,
+  TableBody,
+  TableCell,
+  TableEmpty,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "./components/table/table";
+export { Textarea } from "./components/textarea/textarea";
