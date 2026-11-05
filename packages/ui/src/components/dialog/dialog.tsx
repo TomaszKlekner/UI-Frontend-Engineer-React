@@ -15,11 +15,12 @@ export function DialogContent({
 }: ComponentPropsWithoutRef<typeof DialogPrimitive.Content>) {
   return (
     <DialogPrimitive.Portal>
-      <DialogPrimitive.Overlay className="fixed inset-0 bg-black/50" />
+      <DialogPrimitive.Overlay className="fixed inset-0 z-[1100] bg-black/40 data-[state=open]:animate-fade-in" />
       <DialogPrimitive.Content
         className={cn(
-          "fixed top-1/2 left-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2",
-          "rounded-control border border-border bg-background p-6 shadow-lg",
+          "fixed top-1/2 left-1/2 z-[1101] max-h-[85vh] w-[calc(100vw-2rem)] max-w-md -translate-x-1/2 -translate-y-1/2 overflow-y-auto",
+          "rounded-card border border-border bg-surface p-6 font-sans text-foreground shadow-[0_16px_48px_rgb(9_9_11/0.2)]",
+          "data-[state=open]:animate-fade-in focus:outline-none",
           className,
         )}
         {...props}
