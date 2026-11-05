@@ -22,17 +22,14 @@ export function Select({
       >
         {children}
       </select>
+      {/* Ten sam kształt co ikona rozwijania w tabelach huba (Remix „arrow-down-s-line”). */}
       <svg
         aria-hidden="true"
         viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="pointer-events-none absolute top-1/2 right-3 size-4 -translate-y-1/2 text-muted-foreground transition-colors duration-150 group-hover:text-foreground"
+        fill="currentColor"
+        className="pointer-events-none absolute top-1/2 right-2.5 size-5 -translate-y-1/2 text-foreground"
       >
-        <path d="m6 9 6 6 6-6" />
+        <path d="M12 13.1716 16.9497 8.22183 18.3639 9.63604 12 16 5.63604 9.63604 7.05025 8.22183 12 13.1716Z" />
       </svg>
     </span>
   );
