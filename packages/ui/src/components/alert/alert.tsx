@@ -37,7 +37,7 @@ export function AlertTitle({
   className,
   ...props
 }: HTMLAttributes<HTMLParagraphElement>) {
-  return <p className={cn("font-semibold", className)} {...props} />;
+  return <p className={cn("m-0 font-semibold", className)} {...props} />;
 }
 
 export function AlertDescription({
@@ -45,6 +45,6 @@ export function AlertDescription({
   ...props
 }: HTMLAttributes<HTMLParagraphElement>) {
   return (
-    <p className={cn("text-muted-foreground", className)} {...props} />
+    <p className={cn("m-0 text-muted-foreground", className)} {...props} />
   );
 }

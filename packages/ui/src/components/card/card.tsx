@@ -32,7 +32,7 @@ export function CardTitle({
 }: HTMLAttributes<HTMLHeadingElement>) {
   return (
     <h3
-      className={cn("font-sans text-base font-semibold text-foreground", className)}
+      className={cn("m-0 font-sans text-base font-semibold text-foreground", className)}
       {...props}
     />
   );
@@ -44,7 +44,7 @@ export function CardDescription({
 }: HTMLAttributes<HTMLParagraphElement>) {
   return (
     <p
-      className={cn("font-sans text-sm text-muted-foreground", className)}
+      className={cn("m-0 font-sans text-sm text-muted-foreground", className)}
       {...props}
     />
   );
