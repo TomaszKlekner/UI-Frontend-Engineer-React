@@ -7,26 +7,30 @@ export function Stat({
   value,
   hint,
   emphasis = false,
+  size = "md",
   className,
 }: {
   label: ReactNode;
   value: ReactNode;
   hint?: ReactNode;
   emphasis?: boolean;
+  /** sm = kompaktowy kafelek (pasek podsumowania nad tabelą). */
+  size?: "sm" | "md";
   className?: string;
 }) {
   return (
     <div
       className={cn(
-        "flex flex-col gap-1 rounded-card border bg-surface px-5 py-4 font-sans shadow-card",
+        "flex flex-col rounded-card border bg-surface font-sans shadow-card",
+        size === "sm" ? "gap-0.5 px-4 py-2.5" : "gap-1 px-5 py-4",
         emphasis ? "border-state-strong" : "border-border",
         className,
       )}
     >
-      <span className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
+      <span className={cn("font-medium tracking-wide text-muted-foreground uppercase", size === "sm" ? "text-[0.6875rem]" : "text-xs")}>
         {label}
       </span>
-      <strong className="text-2xl font-semibold text-foreground tabular-nums">
+      <strong className={cn("font-semibold text-foreground tabular-nums", size === "sm" ? "text-lg leading-tight" : "text-2xl")}>
         {value}
       </strong>
       {hint ? (
