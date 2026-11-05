@@ -27,14 +27,14 @@
   --color-border-strong: var(--color-gray-400);
 
   /* ——— Semantic: main action (monochrome) ——— */
-  --color-primary: var(--color-gray-900);
-  --color-primary-hover: var(--color-gray-700);
+  --color-primary: var(--color-gray-800);
+  --color-primary-hover: var(--color-gray-600);
   --color-primary-foreground: var(--color-white);
-  --color-ring: var(--color-gray-900);
+  --color-ring: var(--color-gray-500);
 
   /* ——— Semantic: states (monochrome — told apart by weight, border, icon) ——— */
   --color-state-subtle: var(--color-gray-100);
-  --color-state-strong: var(--color-gray-900);
+  --color-state-strong: var(--color-gray-400);
 
   /* ——— Typography, radius, shadow ——— */
   --font-sans: "Segoe UI", ui-sans-serif, system-ui, sans-serif;
@@ -45,14 +45,15 @@
 
 @theme {
   /* ——— Motion ——— */
-  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-emphasized: cubic-bezier(0.3, 0, 0, 1.2);
   --duration-fast: 150ms;
-  --duration-normal: 220ms;
+  --duration-normal: 280ms;
 
   --animate-toast-in: toast-in var(--duration-normal) var(--ease-standard);
   --animate-toast-out: toast-out var(--duration-fast) var(--ease-standard);
   --animate-fade-in: fade-in var(--duration-normal) var(--ease-standard);
+  --animate-row-in: row-in var(--duration-normal) var(--ease-standard);
 
   @keyframes toast-in {
     from {
@@ -69,6 +70,12 @@
   @keyframes fade-in {
     from {
       opacity: 0;
+    }
+  }
+  @keyframes row-in {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
     }
   }
 }
