@@ -78,8 +78,8 @@ export function Toaster({ className, style }: { className?: string; style?: CSSP
             "data-[state=open]:animate-toast-in data-[state=closed]:animate-toast-out",
             "data-[swipe=move]:translate-x-(--radix-toast-swipe-move-x) data-[swipe=cancel]:translate-x-0 data-[swipe=cancel]:transition-transform data-[swipe=end]:animate-toast-out",
             t.variant === "strong"
-              ? "border-state-strong border-l-4"
-              : "border-border",
+              ? "border-border border-l-4 border-l-status-error"
+              : "border-border border-l-4 border-l-status-success",
           )}
         >
           <div className="flex min-w-0 flex-1 flex-col gap-0.5">

@@ -42,3 +42,4 @@ export {
   type ToastInput,
   type ToastVariant,
 } from "./components/toast/toast";
+export { Switch } from "./components/switch/switch";

@@ -27,14 +27,34 @@
   --color-border-strong: var(--color-gray-400);
 
   /* ——— Semantic: main action (monochrome) ——— */
-  --color-primary: var(--color-gray-900);
-  --color-primary-hover: var(--color-gray-700);
+  --color-primary: var(--color-gray-800);
+  --color-primary-hover: var(--color-gray-600);
   --color-primary-foreground: var(--color-white);
-  --color-ring: var(--color-gray-900);
+  --color-ring: var(--color-gray-500);
 
   /* ——— Semantic: states (monochrome — told apart by weight, border, icon) ——— */
   --color-state-subtle: var(--color-gray-100);
-  --color-state-strong: var(--color-gray-900);
+  --color-state-strong: var(--color-gray-400);
+
+  /* ——— Status palette (05.11): main = ikona / ramka / kropka (NIE tekst), bg = tło, text = tekst (WCAG AA) ——— */
+  --color-status-success: #10b981;
+  --color-status-success-bg: #ecfdf5;
+  --color-status-success-text: #047857;
+  --color-status-info: #0284c7;
+  --color-status-info-bg: #f0f9ff;
+  --color-status-info-text: #0369a1;
+  --color-status-warning: #d97706;
+  --color-status-warning-bg: #fffbeb;
+  --color-status-warning-text: #b45309;
+  --color-status-notice: #eab308;
+  --color-status-notice-bg: #fefce8;
+  --color-status-notice-text: #854d0e;
+  --color-status-error: #e31b23;
+  --color-status-error-bg: #fef2f2;
+  --color-status-error-text: #b91c1c;
+  --color-status-neutral: var(--color-gray-500);
+  --color-status-neutral-bg: var(--color-gray-100);
+  --color-status-neutral-text: var(--color-gray-700);
 
   /* ——— Typography, radius, shadow ——— */
   --font-sans: "Segoe UI", ui-sans-serif, system-ui, sans-serif;
@@ -45,14 +65,15 @@
 
 @theme {
   /* ——— Motion ——— */
-  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-emphasized: cubic-bezier(0.3, 0, 0, 1.2);
   --duration-fast: 150ms;
-  --duration-normal: 220ms;
+  --duration-normal: 280ms;
 
   --animate-toast-in: toast-in var(--duration-normal) var(--ease-standard);
   --animate-toast-out: toast-out var(--duration-fast) var(--ease-standard);
   --animate-fade-in: fade-in var(--duration-normal) var(--ease-standard);
+  --animate-row-in: row-in var(--duration-normal) var(--ease-standard);
 
   @keyframes toast-in {
     from {
@@ -69,6 +90,12 @@
   @keyframes fade-in {
     from {
       opacity: 0;
+    }
+  }
+  @keyframes row-in {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
     }
   }
 }
