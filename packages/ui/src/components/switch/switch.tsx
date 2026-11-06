@@ -6,6 +6,7 @@ export function Switch({
   checked,
   onCheckedChange,
   label,
+  tone = "neutral",
   className,
   disabled,
   ...props
@@ -14,6 +15,8 @@ export function Switch({
   onCheckedChange: (checked: boolean) => void;
   /** Visible label next to the switch (also its accessible name). */
   label?: ReactNode;
+  /** `info` = niebieski token status-info gdy włączony; `neutral` = szary (domyślny). */
+  tone?: "neutral" | "info";
 }) {
   return (
     <label className={cn("inline-flex cursor-pointer items-center gap-2 font-sans text-sm text-foreground", disabled && "cursor-not-allowed opacity-50", className)}>
@@ -27,7 +30,11 @@ export function Switch({
           "relative m-0 inline-flex h-5 min-h-0 w-9 shrink-0 cursor-pointer items-center rounded-full border-0 p-0",
           "transition-colors duration-200 ease-[cubic-bezier(0.4,0,0.2,1)]",
           "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:cursor-not-allowed",
-          checked ? "bg-gray-700" : "bg-gray-300",
+          checked
+            ? tone === "info"
+              ? "bg-status-info"
+              : "bg-gray-700"
+            : "bg-gray-300",
         )}
         {...props}
       >

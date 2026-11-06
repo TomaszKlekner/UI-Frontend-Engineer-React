@@ -18,3 +18,11 @@ export const Playground: Story = {
     return <Switch checked={on} onCheckedChange={setOn} label="Automatyczne przypomnienia" />;
   },
 };
+
+export const InfoTone: Story = {
+  args: { checked: true, onCheckedChange: () => {}, tone: "info" },
+  render: () => {
+    const [on, setOn] = useState(true);
+    return <Switch checked={on} onCheckedChange={setOn} tone="info" label="Usługa włączona (niebieski)" />;
+  },
+};
