@@ -32,9 +32,9 @@ export function Switch({
           "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:cursor-not-allowed",
           checked
             ? tone === "info"
-              ? "bg-status-info"
-              : "bg-gray-700"
-            : "bg-gray-300",
+              ? "!bg-status-info"
+              : "!bg-gray-700"
+            : "!bg-gray-300",
         )}
         {...props}
       >
